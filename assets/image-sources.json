@@ -1,0 +1,118 @@
+{
+  "$schema": "./image-sources.schema.json",
+  "version": 1,
+  "sourceDirectory": "assets/images/source",
+  "outputDirectory": "assets/images",
+  "profiles": {
+    "card": {
+      "widths": [400, 800, 1200],
+      "jpegQuality": 82,
+      "webpQuality": 78
+    },
+    "background": {
+      "widths": [768, 1440, 2400],
+      "jpegQuality": 82,
+      "webpQuality": 78
+    }
+  },
+  "images": [
+    {
+      "name": "hero",
+      "profile": "background",
+      "sourceUrl": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=2000&q=88",
+      "usage": "Homepage hero background",
+      "objectPosition": "center 18%"
+    },
+    {
+      "name": "film-card",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=82",
+      "usage": "Documentary film card",
+      "objectPosition": "center"
+    },
+    {
+      "name": "designer-amina",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=82",
+      "usage": "Amina Wekesa portrait",
+      "objectPosition": "center"
+    },
+    {
+      "name": "designer-kamau",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=82",
+      "usage": "Kamau Otieno portrait",
+      "objectPosition": "center"
+    },
+    {
+      "name": "designer-wanjiku",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=82",
+      "usage": "Wanjiku Muriithi portrait",
+      "objectPosition": "center"
+    },
+    {
+      "name": "designer-baraka",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=82",
+      "usage": "Baraka Oduor portrait",
+      "objectPosition": "center"
+    },
+    {
+      "name": "product-tee",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=82",
+      "usage": "Threads documentary T-shirt",
+      "objectPosition": "center"
+    },
+    {
+      "name": "product-carryall",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=82",
+      "usage": "Dandora Carryall",
+      "objectPosition": "center"
+    },
+    {
+      "name": "product-field-notes",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=800&q=82",
+      "usage": "Field Notes 001 photo book",
+      "objectPosition": "center"
+    },
+    {
+      "name": "product-offcut-cap",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=800&q=82",
+      "usage": "Offcut Cap",
+      "objectPosition": "center"
+    },
+    {
+      "name": "exhibition",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1100&q=82",
+      "usage": "Threads of Dandora gallery exhibition",
+      "objectPosition": "center"
+    },
+    {
+      "name": "tour-dandora",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=900&q=82",
+      "usage": "Dandora Material Walk",
+      "objectPosition": "center"
+    },
+    {
+      "name": "tour-studio",
+      "profile": "card",
+      "sourceUrl": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=900&q=82",
+      "usage": "Designers' Studio Circuit",
+      "objectPosition": "center"
+    },
+    {
+      "name": "fashion-market",
+      "profile": "background",
+      "sourceUrl": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2000&q=86",
+      "usage": "Fashion Week and market background",
+      "objectPosition": "center"
+    }
+  ]
+}

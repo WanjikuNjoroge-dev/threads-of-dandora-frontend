@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://threadsofdandora.local/image-sources.schema.json",
+  "title": "Threads of Dandora image source manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "sourceDirectory", "outputDirectory", "profiles", "images"],
+  "properties": {
+    "version": { "const": 1 },
+    "sourceDirectory": { "type": "string", "minLength": 1 },
+    "outputDirectory": { "type": "string", "minLength": 1 },
+    "profiles": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["widths", "jpegQuality", "webpQuality"],
+        "properties": {
+          "widths": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "integer", "minimum": 1 }
+          },
+          "jpegQuality": { "type": "integer", "minimum": 1, "maximum": 100 },
+          "webpQuality": { "type": "integer", "minimum": 1, "maximum": 100 }
+        }
+      }
+    },
+    "images": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "profile", "sourceUrl", "usage", "objectPosition"],
+        "properties": {
+          "name": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "profile": { "type": "string", "minLength": 1 },
+          "sourceUrl": { "type": "string", "format": "uri", "pattern": "^https://images\\.unsplash\\.com/" },
+          "usage": { "type": "string", "minLength": 1 },
+          "objectPosition": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}
