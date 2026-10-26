@@ -1,0 +1,94 @@
+
+#dandora-intro{--dd-ink:#0a0907;--dd-chalk:#f0ece3;--dd-gold:#c8a96e;--dd-line:#655c4b;--dd-duration:1800ms;font-family:Arial,sans-serif}
+#dandora-intro *{box-sizing:border-box}
+#dandora-intro .dd-stage{position:relative;min-height:640px;overflow:hidden;background:var(--dd-ink);color:var(--dd-chalk)}
+#dandora-intro .dd-home{min-height:640px;background:radial-gradient(ellipse at 95% 70%,#71614155,transparent 55%),linear-gradient(115deg,#0a0907 30%,#23251b);padding:26px 32px;display:flex;flex-direction:column;justify-content:space-between}
+#dandora-intro header,#dandora-intro footer{display:flex;justify-content:space-between;gap:20px;font:10px/1.6 monospace;letter-spacing:.14em}
+#dandora-intro header span:first-child{color:var(--dd-gold)}
+#dandora-intro .dd-hero{padding:35px 0}
+#dandora-intro .dd-eyebrow{font:10px/1.6 monospace;letter-spacing:.17em;color:var(--dd-gold)}
+#dandora-intro h2{font:500 clamp(48px,10vw,88px)/.97 Georgia,serif;letter-spacing:-.05em;margin:20px 0}
+#dandora-intro h2 em{font-weight:400;color:var(--dd-gold)}
+#dandora-intro p{font:14px/1.65 Arial,sans-serif;color:#c5bcae;margin:22px 0}
+#dandora-intro .dd-watch{font:11px monospace;border-bottom:1px solid var(--dd-gold);padding-bottom:9px;letter-spacing:.13em}
+#dandora-intro footer{color:#b6a88e;font-size:9px}
+#dandora-intro .dd-curtain{position:absolute;inset:0;background:#11120f;z-index:2}
+#dandora-intro .dd-film-background{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;gap:18px;overflow:hidden;pointer-events:none;opacity:.3}
+#dandora-intro .dd-film-background::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,#11120f88,transparent 75%);pointer-events:none}
+#dandora-intro .dd-film-track{display:flex;width:max-content;flex-shrink:0;background:#080a08;position:relative;padding:23px 0;border-top:1px solid #8a8665;border-bottom:1px solid #8a8665;will-change:transform}
+#dandora-intro .dd-film-track::before,#dandora-intro .dd-film-track::after{content:"";position:absolute;left:0;right:0;height:10px;background:repeating-linear-gradient(90deg,transparent 0 12px,#b6ac83 12px 25px,transparent 25px 40px)}
+#dandora-intro .dd-film-track::before{top:6px}
+#dandora-intro .dd-film-track::after{bottom:6px}
+#dandora-intro .dd-film-group{display:flex;gap:12px;padding-right:12px;flex-shrink:0}
+#dandora-intro .dd-film-frame{width:208px;height:152px;border:1px solid #888364;background:#11120f;position:relative;overflow:hidden}
+#dandora-intro .dd-running .dd-film-track{animation:dd-film-travel 9s linear infinite}
+#dandora-intro .dd-running .dd-film-track:nth-child(2){animation-direction:reverse;animation-duration:12s}
+#dandora-intro .dd-running .dd-film-track:nth-child(3){animation-duration:10s}
+#dandora-intro .dd-running .dd-film-background{animation:dd-film-fade var(--dd-duration) both}
+#dandora-intro .dd-finished .dd-film-background{display:none}
+@keyframes dd-film-travel{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes dd-film-fade{0%{opacity:0}15%,55%{opacity:.48}95%,100%{opacity:0}}
+#dandora-intro .dd-board-position{position:absolute;inset:0;z-index:6;display:grid;place-items:center;padding-top:90px;pointer-events:none}
+#dandora-intro .dd-board{width:min(528px,96%);position:relative;transform:rotate(-4deg);color:var(--dd-chalk);filter:drop-shadow(0 24px 28px #0006)}
+#dandora-intro .dd-arm,#dandora-intro .dd-fixed-stripe{height:42px;background:repeating-linear-gradient(125deg,#e9e2cf 0px,#e9e2cf 38px,#242722 39px,#242722 77px);border:2px solid #363a31}
+#dandora-intro .dd-arm{position:absolute;bottom:100%;left:0;width:100%;transform-origin:17px 100%;transform:rotate(-25deg);border-radius:5px 5px 0 0}
+#dandora-intro .dd-pin{position:absolute;left:9px;bottom:8px;width:11px;height:11px;border-radius:50%;background:#aaa590;border:3px solid #484d41}
+#dandora-intro .dd-slate{padding:27px 29px 20px;background:#20251e;border:2px solid #656a59;border-top:0;border-radius:0 0 7px 7px}
+#dandora-intro .dd-slate-kicker{font:10px monospace;letter-spacing:.25em;color:#b9b8a5}
+#dandora-intro .dd-film-title{font:500 39px/1.08 Georgia,serif;letter-spacing:.02em;padding:13px 0 22px}
+#dandora-intro .dd-slate-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #8d927c;border-bottom:1px solid #8d927c}
+#dandora-intro .dd-slate-grid>div{padding:8px 10px;display:grid;gap:3px;border-right:1px solid #8d927c}
+#dandora-intro .dd-slate-grid>div:last-child{border:0}
+#dandora-intro small{font:9px monospace;letter-spacing:.15em;color:#c0c2b1}
+#dandora-intro b{font:italic 34px Georgia,serif}
+#dandora-intro .dd-slate-bottom{display:flex;justify-content:space-between;gap:10px;font:8px monospace;letter-spacing:.08em;padding-top:13px}
+#dandora-intro .dd-skip{position:absolute;z-index:7;bottom:22px;right:24px;background:#11120fcc;color:var(--dd-chalk);border:1px solid #777462;padding:11px 15px;font:11px monospace;min-height:44px}
+#dandora-intro .dd-clothes{position:absolute;inset:0;z-index:5;overflow:hidden;pointer-events:none;opacity:0}
+#dandora-intro .dd-fabric-backdrop{position:absolute;inset:0;background:#292a20}
+#dandora-intro .dd-garment{position:absolute;top:-12%;height:132%;width:82%;background-color:var(--fabric);background-image:repeating-linear-gradient(0deg,transparent 0 4px,#f2dfb313 4px 5px),repeating-linear-gradient(90deg,transparent 0 7px,#00000012 7px 8px);will-change:transform}
+#dandora-intro .dd-shirt-left,#dandora-intro .dd-shirt-right{clip-path:polygon(30% 0,42% 5%,58% 5%,70% 0,100% 18%,88% 43%,74% 35%,79% 100%,21% 100%,26% 35%,12% 43%,0 18%)}
+#dandora-intro .dd-shirt-left{left:-23%;--fabric:#9b5037;--start-angle:-13deg;--exit-x:-125%;--exit-angle:-29deg}
+#dandora-intro .dd-shirt-right{right:-24%;--fabric:#b49a6a;--start-angle:14deg;--exit-x:125%;--exit-angle:30deg}
+#dandora-intro .dd-pants{left:24%;width:53%;top:-20%;height:145%;--fabric:#53604c;--start-angle:5deg;--exit-x:190%;--exit-angle:20deg;clip-path:polygon(12% 0,88% 0,100% 100%,58% 100%,50% 29%,42% 100%,0 100%)}
+#dandora-intro .dd-shirt-seam{position:absolute;inset:8% 27% 4%;border:2px dashed #f6e0b35c;border-radius:0 0 8px 8px}
+#dandora-intro .dd-shirt-seam::after{content:"";position:absolute;right:8%;top:23%;width:29%;height:14%;border:2px dashed #f6e0b35c}
+#dandora-intro .dd-pants-seam{position:absolute;inset:6% 15% 0;border-top:3px double #e7dfbe77;border-left:2px dashed #e7dfbe55;border-right:2px dashed #e7dfbe55}
+#dandora-intro .dd-clothes-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#fff2d9;text-shadow:0 2px 12px #0007}
+#dandora-intro .dd-clothes-label span{font:10px monospace;letter-spacing:.18em;margin-bottom:14px}
+#dandora-intro .dd-clothes-label strong{font:italic 500 clamp(26px,5vw,42px)/1.15 Georgia,serif}
+#dandora-intro .dd-running .dd-clothes{animation:dd-clothes-phase 3300ms both}
+#dandora-intro .dd-running .dd-garment{animation:dd-garment-exit 3300ms cubic-bezier(.4,0,.2,1) both}
+#dandora-intro .dd-running .dd-fabric-backdrop{animation:dd-fabric-clear 3300ms both}
+#dandora-intro .dd-running .dd-clothes-label{animation:dd-clothes-caption 3300ms both}
+#dandora-intro .dd-finished .dd-clothes{display:none}
+@keyframes dd-clothes-phase{0%,26%{opacity:0}37%,100%{opacity:1}}
+@keyframes dd-garment-exit{0%,35%{transform:translateX(0) rotate(var(--start-angle))}94%,100%{transform:translateX(var(--exit-x)) rotate(var(--exit-angle))}}
+@keyframes dd-fabric-clear{0%,38%{opacity:1}65%,100%{opacity:0}}
+@keyframes dd-clothes-caption{0%,29%{opacity:0}37%,42%{opacity:1}55%,100%{opacity:0}}
+#dandora-intro .dd-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:14px;flex-wrap:wrap}
+#dandora-intro .dd-replay{background:var(--dd-gold);border:0;color:var(--dd-ink);padding:12px 20px;min-height:44px;font:12px Arial,sans-serif;border-radius:3px}
+#dandora-intro .dd-status{font:12px Arial,sans-serif;color:light-dark(#595346,#c7bdab)}
+#dandora-intro .dd-running .dd-arm{animation:dd-clap var(--dd-duration) both}
+#dandora-intro .dd-running .dd-board{animation:dd-depart var(--dd-duration) both}
+#dandora-intro .dd-running .dd-curtain{animation:dd-unveil var(--dd-duration) both}
+#dandora-intro .dd-running .dd-hero{animation:dd-home-in var(--dd-duration) both}
+#dandora-intro .dd-finished .dd-curtain,#dandora-intro .dd-finished .dd-board-position,#dandora-intro .dd-finished .dd-skip{display:none}
+@keyframes dd-clap{0%,24%{transform:rotate(-25deg)}38%{transform:rotate(0)}43%{transform:rotate(-4deg)}49%,100%{transform:rotate(0)}}
+@keyframes dd-depart{0%{transform:translateY(14px) rotate(-4deg);opacity:0}17%,38%{transform:translateY(0) rotate(-4deg);opacity:1}41%{transform:translateY(4px) rotate(-3deg)}50%{transform:translateY(0) rotate(-4deg);opacity:1}92%,100%{transform:translateY(700px) rotate(9deg);opacity:0}}
+@keyframes dd-unveil{0%,53%{opacity:1}91%,100%{opacity:0}}
+@keyframes dd-home-in{0%,55%{transform:translateY(16px);opacity:0}100%{transform:translateY(0);opacity:1}}
+@media(max-width:480px){#dandora-intro .dd-home{padding:24px}#dandora-intro header span:last-child{display:none}#dandora-intro .dd-film-title{font-size:28px}#dandora-intro .dd-slate{padding:22px 18px 17px}}
+@media(prefers-reduced-motion:reduce){#dandora-intro .dd-running *{animation:none!important}#dandora-intro .dd-curtain,#dandora-intro .dd-board-position,#dandora-intro .dd-skip,#dandora-intro .dd-film-background,#dandora-intro .dd-clothes{display:none}}
+
+/* Production overlay. Hidden by default so a disabled or failed script cannot cover the site. */
+#dandora-intro{position:fixed;inset:0;z-index:4800;overflow:hidden;isolation:isolate;pointer-events:auto}
+#dandora-intro[hidden]{display:none!important}
+#dandora-intro .dd-board{width:min(528px,80vw)}
+#dandora-intro .dd-clothes{pointer-events:none}
+#dandora-intro .dd-skip{cursor:pointer}
+#dandora-intro .dd-skip:focus-visible{outline:2px solid var(--dd-chalk);outline-offset:4px}
+@media(max-height:650px){#dandora-intro .dd-board{width:min(340px,76vw)}#dandora-intro .dd-film-title{font-size:26px;padding:10px 0 15px}#dandora-intro .dd-slate{padding:16px 20px 12px}#dandora-intro .dd-board-position{padding-top:60px}}
+@media(prefers-reduced-motion:reduce){#dandora-intro{display:none!important}}
+#dandora-intro .dd-film-group{min-width:100vw}#dandora-intro .dd-film-frame{flex:1 0 208px}
+
+#dandora-intro .dd-running.dd-paused *{animation-play-state:paused!important}
